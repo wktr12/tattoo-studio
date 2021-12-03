@@ -225,11 +225,16 @@ header .mobile ul li a {
   color: var(--white);
   font-size: 28px;
   text-align: center;
-  margin-bottom: 500vh;
 }
 
 @media (max-width: 850px) {
   .about h1 {
     padding-top: 75px;
   }
+}
+
+.about-studio img {
+  width: 35%;
+  border-radius: 50px 0px 0px 50px;
+  margin-left: 50px;
 }
