@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <title>Tattoo studio</title>
   </head>
@@ -29,20 +30,24 @@
           <div class="menu-btn__burger"></div>
         </div>
         <ul id="mobile-menu">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">O NAS</a></li>
-          <li><a href="#">GALERIA</a></li>
-          <li><a href="#">PYTANIA</a></li>
-          <li><a href="#">CENNIK</a></li>
-          <li><a href="#">KONTAKT</a></li>
+          <li><a href="#home" onclick="navToggle();">HOME</a></li>
+          <li><a href="#about" onclick="navToggle();">O NAS</a></li>
+          <li><a href="#" onclick="navToggle();">GALERIA</a></li>
+          <li><a href="#" onclick="navToggle();">PYTANIA</a></li>
+          <li><a href="#" onclick="navToggle();">CENNIK</a></li>
+          <li><a href="#" onclick="navToggle();">KONTAKT</a></li>
         </ul>
         <img src="/img/logo.png" />
       </nav>
     </header>
     <section class="banner"></section>
     <section class="about" id="about">
-      <h1>O NAS</h1>
+      <h1 data-aos="zoom-in">O NAS</h1>
     </section>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

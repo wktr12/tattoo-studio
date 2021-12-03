@@ -34,7 +34,7 @@ header {
 }
 
 header.sticky {
-  padding: 5px 0px;
+  padding: 10px 0px;
   background: var(--white);
 }
 
@@ -87,6 +87,10 @@ header nav ul img {
 
 /* NAV mobile */
 
+.sticky-mobile {
+  display: none;
+}
+
 .mobile {
   display: none;
 }
@@ -103,6 +107,7 @@ header nav ul img {
     display: none;
   }
   .sticky-mobile {
+    display: block;
     padding: 5px 0px;
     background: var(--white);
   }
@@ -216,7 +221,7 @@ header .mobile ul li a {
 }
 
 .about h1 {
-  padding-top: 60px;
+  padding-top: 80px;
   color: var(--white);
   font-size: 28px;
   text-align: center;
