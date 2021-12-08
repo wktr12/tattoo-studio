@@ -122,7 +122,6 @@ header .mobile ul {
   position: relative;
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
 
@@ -208,8 +207,28 @@ header .mobile ul li a {
   background-size: cover;
   background-attachment: fixed;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+h1 {
+  display: flex;
   justify-content: center;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  margin: auto 0;
+  font-size: 84px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 52px;
+    width: 220px;
+  }
 }
 
 .scroll-down {
@@ -268,7 +287,7 @@ header .mobile ul li a {
   }
 }
 
-.about h1 {
+.about h2 {
   padding-top: 80px;
   color: var(--white);
   font-size: 28px;
@@ -276,7 +295,7 @@ header .mobile ul li a {
 }
 
 @media (max-width: 850px) {
-  .about h1 {
+  .about h2 {
     padding-top: 75px;
   }
 }
