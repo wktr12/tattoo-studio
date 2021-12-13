@@ -7,6 +7,14 @@
   --background: linear-gradient(269.7deg, #d4955e 0%, #754213 99.25%);
   --white: #f1f1f1;
   --black: #0f0f0f;
+  --instagram-bg: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
 }
 
 * {
@@ -139,11 +147,15 @@ header .mobile ul li a {
 }
 
 #mobile-menu {
-  display: none;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 #mobile-menu.mobile-menu-visible {
-  display: flex;
+  opacity: 1;
+  height: auto;
 }
 
 /* HAMBURGER */
@@ -282,6 +294,10 @@ h1 {
   }
 }
 
+.about {
+  padding-top: 95px;
+}
+
 .about h2 {
   padding-bottom: 10px;
   color: var(--white);
@@ -291,11 +307,12 @@ h1 {
 
 .container-about {
   display: grid;
+  justify-content: center;
   text-align: center;
-  margin-top: 80px;
   grid-template-columns: 40% 40%;
   grid-template-rows: auto auto auto;
   align-items: center;
+  gap: 20px 0px;
   grid-template-areas:
     "jpg text1"
     "text2 jpg2"
@@ -306,18 +323,20 @@ h1 {
   justify-self: center;
   grid-area: jpg;
 }
-.jpg img {
-  height: 200px;
+.jpg img,
+.jpg2 img,
+.jpg3 img {
+  height: 300px;
   border-radius: 15px;
 }
 
 .container-about .jpg2 {
-  justify-self: start;
+  justify-self: center;
   grid-area: jpg2;
 }
 
 .container-about .jpg3 {
-  justify-self: end;
+  justify-self: center;
   grid-area: jpg3;
 }
 
@@ -328,8 +347,43 @@ h1 {
 
 .container-about .text2 {
   grid-area: text2;
+  color: var(--white);
 }
 
 .container-about .text3 {
   grid-area: text3;
+  color: var(--white);
+}
+
+.fa-instagram {
+  background: var(--instagram-bg);
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.about a {
+  color: var(--white);
+  transition: 0.6s;
+}
+
+.about a:hover {
+  color: var(--white);
+  font-size: 22px;
+}
+
+@media (max-width: 850px) {
+  .container-about {
+    grid-template-columns: 80%;
+    grid-template-rows: auto auto auto auto auto auto;
+    align-items: center;
+    gap: 20px 0px;
+    grid-template-areas:
+      "jpg"
+      "text1"
+      "jpg2"
+      "text2"
+      "jpg3"
+      "text3";
+  }
 }
