@@ -277,56 +277,59 @@ h1 {
 }
 
 @media (max-width: 850px) {
-  .banner {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url(/img/banner.png) no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
+  .scroll-down {
+    margin-bottom: 150px;
   }
 }
 
 .about h2 {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 10px;
   color: var(--white);
   font-size: 28px;
   text-align: center;
 }
 
-@media (max-width: 850px) {
-  .about h2 {
-    padding-top: 75px;
-  }
-}
-
-.about-studio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about-img {
-  height: 200px;
-  width: 45%;
-  border-radius: 15px;
-  background-image: url(/img/about-studio.jpg);
-  background-size: cover;
-  background-position: 40% 40%;
-}
-
-.about-text {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  width: 45%;
+.container-about {
+  display: grid;
   text-align: center;
+  margin-top: 80px;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  grid-template-areas:
+    "jpg text1"
+    "text2 jpg2"
+    "jpg3 text3";
+}
+
+.container-about .jpg {
+  justify-self: center;
+  grid-area: jpg;
+}
+.jpg img {
+  height: 200px;
+  border-radius: 15px;
+}
+
+.container-about .jpg2 {
+  justify-self: start;
+  grid-area: jpg2;
+}
+
+.container-about .jpg3 {
+  justify-self: end;
+  grid-area: jpg3;
+}
+
+.container-about .text1 {
+  grid-area: text1;
   color: var(--white);
 }
 
-@media (max-width: 850px) {
-  .about-img,
-  .about-text {
-    width: 80%;
-  }
+.container-about .text2 {
+  grid-area: text2;
+}
+
+.container-about .text3 {
+  grid-area: text3;
 }
