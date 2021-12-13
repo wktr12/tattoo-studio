@@ -217,6 +217,9 @@ header .mobile ul li a {
   background: url(/img/banner.png) no-repeat;
   background-position: center;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
